@@ -1,0 +1,11 @@
+baseURL = "https://go.hollow.sh/"
+languageCode = "en-us"
+title = "Hollow Go Vanity URLs"
+
+disableKinds = ["home", "section", "taxonomy", "term", "sitemap", "RSS" ]
+ignoreErrors = ["error-disable-taxonomy"]
+
+publishDir = "docs"
+
+[Permalinks]
+	code = "/:filename/"
