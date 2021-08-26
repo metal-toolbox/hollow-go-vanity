@@ -1,0 +1,40 @@
+repository:
+  # See https://developer.github.com/v3/repos/#edit for all available settings.
+  name: hollow-go-vanity
+  description: Static site for golang vanity imports for the hollow ecosystem
+  homepage: https://go.hollow.sh/
+  private: false
+  has_issues: true
+  has_wiki: false
+  has_downloads: false
+  default_branch: main
+  allow_squash_merge: true
+  allow_merge_commit: false
+  allow_rebase_merge: true
+
+teams:
+  - name: hollow-core
+    permission: push
+
+branches:
+  - name: main
+    # https://developer.github.com/v3/repos/branches/#update-branch-protection
+    # Branch Protection settings. Set to null to disable
+    protection:
+      # Required. Require at least one approving review on a pull request, before merging. Set to null to disable.
+      required_pull_request_reviews:
+        required_approving_review_count: 1
+        dismiss_stale_reviews: true
+        require_code_owner_reviews: true
+        dismissal_restrictions:
+          users: []
+          teams: [hollow-core]
+      required_status_checks:
+        strict: false
+        contexts: []
+      enforce_admins: true
+      required_linear_history: true
+      restrictions:
+        apps: []
+        users: []
+        teams: []
