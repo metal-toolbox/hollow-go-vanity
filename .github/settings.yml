@@ -28,7 +28,8 @@ branches:
         require_code_owner_reviews: true
         dismissal_restrictions:
           users: []
-          teams: [hollow-core]
+          teams:
+            - hollow-core
       required_status_checks:
         strict: false
         contexts: []
