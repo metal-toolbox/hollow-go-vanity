@@ -34,7 +34,5 @@ branches:
         contexts: []
       enforce_admins: true
       required_linear_history: true
-      restrictions:
-        apps: []
-        users: []
-        teams: []
+      # Don't allow anyone to push directly to the branch
+      restrictions: null
