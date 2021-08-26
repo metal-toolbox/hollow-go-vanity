@@ -24,7 +24,7 @@ branch: main
 You may generate the new static HTML by running
 
 ```
-hugo
+make
 ```
 
 Then commit your changes and submit a PR.
